@@ -1,0 +1,141 @@
+.productContainer {
+    display: flex;
+    justify-content: center; 
+}
+
+.productMain {
+    max-width: 1087px; 
+    height: 700px;
+    margin: 50px auto; 
+    display: flex;
+    padding: 10px;
+}
+
+.imageContainer {
+    flex: 0 0 auto;
+    background-color: white;
+    width: 400px; 
+    height: 500px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.productImage {
+    max-width: 200px; 
+  
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; 
+    padding: 20px;
+}
+
+.productName {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.productDescription {
+    font-size: 1rem; 
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.productRating,
+.productPrice {
+    font-size: 1rem; 
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.selectColors,
+.chooseSize {
+    font-size: 1rem; 
+    margin-bottom: 10px;
+    text-align: left; 
+}
+
+.colorsContainer {
+    display: flex;
+    margin-top: 10px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sizeContainer {
+    margin-top: 20px;
+}
+
+.dimensionsContainer {
+    display: flex;
+    margin-top: 10px;
+}
+
+.dimension {
+    padding:10px 22px;
+    margin-right: 10px;
+    color: #606060;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    transition: 1s;
+}
+.dimension:hover{
+    background-color: black;
+    color: white;
+}
+.buttonsContainer {
+    margin-top: 20px;
+    text-align: left;
+}
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantityButtons {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding:10px 22px;
+    margin-right: 10px;
+    color: black;
+    border-radius: 20px;
+}
+
+.quantityButton {
+    background-color: #f0f0f0;;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 50px;
+}
+
+
+.quantityDisplay {
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+.addButton {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 300px;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: 1s;
+}
