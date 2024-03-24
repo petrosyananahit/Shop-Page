@@ -4,7 +4,7 @@
 }
 
 .productMain {
-    max-width: 1087px; 
+    max-width: 1440px; 
     height: 700px;
     margin: 50px auto; 
     display: flex;
@@ -21,7 +21,10 @@
     align-items: center;
 }
 
-
+.starsAndRate{
+    display: flex;
+    gap: 5px;
+}
 .productImage {
     max-width: 200px; 
   
@@ -46,11 +49,16 @@
     text-align: left;
 }
 
-.productRating,
+
 .productPrice {
     font-size: 1rem; 
     margin-bottom: 5px;
     text-align: left;
+
+}
+.productPrice p{
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .selectColors,
@@ -96,12 +104,11 @@
 .buttonsContainer {
     margin-top: 20px;
     text-align: left;
-}
-.buttonsContainer {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
+
 
 .quantityButtons {
     display: flex;
@@ -138,4 +145,13 @@
     font-size: 1rem;
     border-radius: 20px;
     transition: 1s;
+}
+
+@media only screen and (max-width: 600px){
+    .productMain {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
 }

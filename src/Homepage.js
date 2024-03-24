@@ -1,15 +1,20 @@
 import './App.css';
-import Comments from './components/Comments';
-import Main from './components/Main';
-import Products from './components/Products';
-import StylingProducts from './components/StylingProducts';
+import Comments from './components/Comments/Comments';
+import Main from './components/Main/Main';
+import Products from './components/Products/Products';
+import SectionAboutProductStyles from './components/SectionAboutProductStyles/SectionAboutProductStyles';
+
 
 function Homepage() {
   return (
     <div className="App">
       <Main/>
+      <h1 className="titleForProducts">NEW ARRIVALS</h1>
       <Products/>
-      <StylingProducts/>
+      <SectionAboutProductStyles/>
+      <div className='containerForComments'>
+      <h1 className='titleForComments'>OUR HAPPY CUSTOMERS</h1>
+      </div>
       <Comments/>
     </div>
   );

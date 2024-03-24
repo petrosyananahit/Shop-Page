@@ -1,0 +1,73 @@
+
+.container {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-divider {
+    margin-bottom: 10px;
+  }
+  
+  .line {
+    width: 100%;
+    border-top: 2px solid black;
+  }
+  .filterContainer{
+    width: 50px;
+    height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #f2f0f1;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-weight: 500;
+    max-width: 1440px;
+    margin: 30px auto;
+
+  }
+  
+  .header-title {
+    font-size: 24px;
+  }
+  
+  .subtext {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  
+  .imageButtonsContainer {
+    display: flex;
+    align-items: center;
+  }
+  .firstButton{
+    width: 120px;
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 30px;
+    background-color: #f2f0f1;
+    color: black;
+    border: none;
+  }
+  .secondButton{
+    width: 166px;
+    height: 48px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+  }

@@ -1,61 +1,69 @@
 .comment_container {
-    width: 450px;
-    height: 150px;
+    width: 410px;
+    height: 165px;
     text-align: left;
-    padding: 30px;
+    padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.503);
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: white;
+
   }
   
+  .commentsArea__container{
+  overflow-x: hidden;
+  overflow-y: auto;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 410px)); 
+  margin-bottom: 50px !important;
+  gap: 10px;
+  justify-content: space-between;   
+  max-width: 1440px;
+  margin: 0 auto;
+}
   
   .contentContainer {
     display: flex;
     justify-content: space-between;
     background-color: white;
+    line-height: 0.1;
+ 
   }
   
   
   .imageContainer img {
-    width: 10px; 
-    height: 10px; 
+    width: 13px; 
+    height: 13px; 
   }
   
 
   .title img{
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 
+  .title{
+    line-height: 0.1; 
+  }
   .text {
     color: rgba(0, 0, 0, 0.503);
     font-size: 12px;
     background-color: white;
-    width: 450px;
+ 
   }
   
   .date{
     color: rgba(0, 0, 0, 0.626);
-    font-size: 14px;
+    font-size: 13px;
     background-color: white;
-    width: 450px;
+
   }
 
-  .commentsArea__container{
-    width: 1087px; 
-    height: auto;
-    margin: 0 auto;  
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-    padding: 0 !important;
-}
+
 
 .button {
     padding:10px 22px;
     color: #606060;
-    background-color: #f0f0f0;
+    background-color: white;
     border-radius: 20px;
     margin-top: 30px;
     transition: 1s;
@@ -63,4 +71,5 @@
 .button:hover{
     background-color: black;
     color: white;
+    cursor: pointer;
 }

@@ -12,6 +12,8 @@
     border-radius: 20px;
     flex-direction: column;
     text-align: center;
+    max-width: 1440px;
+    margin: 0 auto;
   }
   .__container p {
     font-size: 34px;
@@ -26,11 +28,11 @@
   
   .containerForImages{
 
-    width: 500px;
+    width: 684px;
   }
   .containerForSmallImages{
    
-    width: 300px;
+    width: 407px;
   }
   
   .containerForImages img,
@@ -39,9 +41,3 @@
  
     object-fit: contain;
   }
-  
-  [class*="__container"] {
-    max-width: 1087px;
-    margin: 0 auto;
-  }
-  

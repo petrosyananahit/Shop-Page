@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
-import styles from '../styles/Categories.module.css';
-import cat from "../images/Cat.png"
-import CategoryProducts from './CategoryProducts';
+import styles from './Categories.module.css';
+import cat from "../../images/Cat.png"
+import CategoryProducts from '../CategoryProducts/CategoryProducts';
+
 
 function Categories() {
   const colors = ["#00C12B", "#F50606", "#F5DD06", "#F57906", "#06CAF5", "#063AF5", "#7D06F5", "#F506A4", "#FFFFFF", "#000000"]
@@ -10,6 +11,7 @@ function Categories() {
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
+    
   };
   return (
     <div className={styles.categoriesContainer}>
@@ -20,19 +22,19 @@ function Categories() {
       <div className={styles.activityContainer}>
           <div className={styles.activity} onClick={() => handleCategorySelect("men's clothing")}>
             <p>Men's Clothing</p>
-            <img src={cat} alt='frame'/>
+            <img src={cat} alt='frame'className={styles.activityImage}/>
           </div>
           <div className={styles.activity} onClick={() => handleCategorySelect("women's clothing")}>
             <p>Women's Clothing</p>
-            <img src={cat} alt='frame'/>
+            <img src={cat} alt='frame'className={styles.activityImage}/>
           </div>
           <div className={styles.activity} onClick={() => handleCategorySelect('jewelery')}>
             <p>Jewelry</p>
-            <img src={cat} alt='frame'/>
+            <img src={cat} alt='frame'className={styles.activityImage}/>
           </div>
           <div className={styles.activity} onClick={() => handleCategorySelect('electronics')}>
             <p>Electronics</p>
-            <img src={cat} alt='frame'/>
+            <img src={cat} alt='frame'className={styles.activityImage}/>
           </div>
         </div>
         <div className={styles.categoryItem}>
@@ -102,12 +104,10 @@ function Categories() {
         
       </div>
       <div className={styles.rightContainer}>
-        {selectedCategory && <CategoryProducts category={selectedCategory} />}
-      </div>
+        <CategoryProducts category={selectedCategory}/>
+       </div>
     </div>
   );
 }
 
 export default Categories;
-
-

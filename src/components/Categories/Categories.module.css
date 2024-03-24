@@ -1,17 +1,22 @@
 .categoriesContainer {
     display: flex;
     justify-content: space-between;
-    max-width: 1087px;
+    max-width: 1440px;
     margin: 0 auto;
+    gap: 20px;
   
   }
-  
-  .leftContainer {
-    width: 300px;
+
+  .leftContainer{
+    max-width: 250px;
   }
-  
   .rightContainer {
-    width: 900px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 300px)); 
+    margin-bottom: 50px !important;
+    gap: 10px;
+    max-width: max-content;
+    justify-content: space-between;   
   }
   
   .categoryItem {
@@ -82,7 +87,7 @@
   }
   
   .activityImage {
-    width: 10px;
+    width: 8px;
     height: 10px;
     margin-left: auto;
   }

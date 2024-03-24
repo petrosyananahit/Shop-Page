@@ -1,19 +1,19 @@
 import React from 'react'
-import styles from "../styles/Footer.module.css"
-import twitter from "../images/twitter.png"
-import facebook from "../images/facebook.png"
-import instagram from "../images/instagram.png"
-import github from "../images/github.png"
-import visa from "../images/Visa.png"
-import master from "../images/Master.png"
-import paypal from "../images/PayPal.png"
-import gpay from "../images/GPay.png"
-import applepay from "../images/ApplePay.png"
-import email from "../images/Email.png"
+import styles from "./Footer.module.css"
+import twitter from "../../images/twitter.png"
+import facebook from "../../images/facebook.png"
+import instagram from "../../images/instagram.png"
+import github from "../../images/github.png"
+import visa from "../../images/Visa.png"
+import master from "../../images/Master.png"
+import paypal from "../../images/PayPal.png"
+import gpay from "../../images/GPay.png"
+import applepay from "../../images/ApplePay.png"
+import email from "../../images/Email.png"
 
 function Footer() {
   return (
-    <>
+    <div className={styles.footer_container}>
     <div className={styles.footer__container}>
     <div className={styles.containerForSubscribe}>
         <div className={styles.textContainer}>
@@ -41,6 +41,7 @@ function Footer() {
             <a href='https://github.com/'><img src={github} className={styles.iconsForSites}/></a>
         </div>
     </div>
+    <div className={styles.footerItems_container}>
     <div className={styles.footer__item}>
         <p className={styles.footer__headings}>COMPANY</p>
         <p>About</p>
@@ -69,6 +70,7 @@ function Footer() {
         <p>How to-Blog</p>
         <p>Youtube Playlist</p>
     </div>
+    </div>
      </div>
     <div className={styles.footer__rigths}>
     <p>Shop.co © 2000-2023, All Rights Reserved</p>
@@ -81,7 +83,7 @@ function Footer() {
     </div>
     </div>
     </div>
-</>
+</div>
   )
 }
 

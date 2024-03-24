@@ -1,4 +1,18 @@
-/* *{
+.titleForProducts{
   text-align: center;
+  margin: 50px;
+  font-weight: 900 ;
 }
-  */
+
+.containerForComments{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.titleForComments{
+  text-align: left;
+  margin: 50px;
+  font-weight: 900;
+
+}
+
+

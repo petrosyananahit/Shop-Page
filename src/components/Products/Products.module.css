@@ -1,0 +1,22 @@
+.product__container {
+    overflow-x: hidden;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 300px)); 
+    margin-bottom: 50px !important;
+    gap: 10px;
+    width: 100%; 
+    justify-content: space-between;   
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 600px){
+    .product__container {
+        margin-top: 1500px;
+    }
+    
+}
+
+
+

@@ -1,0 +1,41 @@
+
+.container {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-divider {
+    margin-bottom: 10px;
+  }
+  
+  .line {
+    width: 100%;
+    border-top: 2px solid black;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin: 30px;
+    font-weight: 500;
+  }
+  
+  .header-title {
+    font-size: 24px;
+  }
+  
+  .subtext {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  

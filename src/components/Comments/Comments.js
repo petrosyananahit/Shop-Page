@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
-import styles from "../styles/Comments.module.css";
-import star from "../images/Star.png";
-import etc from "../images/Etc.png";
-import frame from "../images/Frame.png";
-import { CommentsData } from "../CommentsData";
+import styles from "./Comments.module.css";
+import star from "../../images/Star.png";
+import etc from "../../images/Etc.png";
+import frame from "../../images/Frame.png";
+import { CommentsData } from "../../CommentsData";
 
 function Comments() {
-  const [displayedReviews, setDisplayedReviews] = useState(2);
+  const [displayedReviews, setDisplayedReviews] = useState(3);
 
   const handleLoadMoreReviews = () => {
-    setDisplayedReviews(prevDisplayedReviews => prevDisplayedReviews + 2);
+    setDisplayedReviews(prevDisplayedReviews => prevDisplayedReviews + 3);
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <p style={{ fontSize: "34px", fontWeight: "700" }}>OUR HAPPY CUSTOMERS</p>
-      <div className={styles.commentsArea__container} style={{ padding: "30px" }}>
+    <div style={{ textAlign: "center", marginTop:"50px" }}>
+      <div className={styles.commentsArea__container}>
         {CommentsData.slice(0, displayedReviews).map(e => {
           return (
             <div key={e.id} className={styles.comment_container}>
@@ -33,7 +32,7 @@ function Comments() {
                   </div>
                 </div>
                 <div className={styles.title}>
-                  <h4>{e.name}<img src={frame} alt='' /></h4>
+                  <h5>{e.name}<img src={frame} alt='' /></h5>
                 </div>
                 <div className={styles.text}>
                   <p>{e.text}</p>

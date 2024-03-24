@@ -1,17 +1,17 @@
 import React from 'react'
-import styles from "../styles/Main.module.css"
-import image from "../images/generalImage.jpg"
-import versache from "../images/Versace.png"
-import zara from "../images/Zara.png"
-import guchi from "../images/Gucci.png"
-import prada from "../images/Prada.png"
-import blackStar from "../images/BlackStar.png"
-import calvin from "../images/CalvinKlein.png"
+import styles from "./Main.module.css"
+import image from "../../images/generalImage.jpg"
+import versache from "../../images/Versace.png"
+import zara from "../../images/Zara.png"
+import guchi from "../../images/Gucci.png"
+import prada from "../../images/Prada.png"
+import blackStar from "../../images/BlackStar.png"
+import calvin from "../../images/CalvinKlein.png"
 
 function Main() {
   return (
-    <>
-        <div className={styles.main__container}>
+    <div className={styles.main__container}>
+        <div className={styles.main_container}>
             <div className={styles.image_container}>
                 <img src={image} alt="Your Image" className={styles.main__image} />
                     <div className={styles.text__overlay}>
@@ -37,17 +37,16 @@ function Main() {
                      </div>
                    </div>
                     </div>
-            <div className={styles.brandsContainer}>
+            </div>
+        </div>
+        <div className={styles.brandsContainer}>
             <img src={versache} alt="Brand Image" className={styles.brands__image} />
             <img src={zara} alt="Brand Image" className={styles.brands__image} />
             <img src={guchi} alt="Brand Image" className={styles.brands__image} />
             <img src={prada} alt="Brand Image" className={styles.brands__image} />
             <img src={calvin} alt="Brand Image" className={styles.brands__image} />
             </div>
-            </div>
-            
-        </div>
-    </>
+    </div>
   )
 }
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from '../styles/StylingProducts.module.css';
-import gym from '../images/Gym.png';
-import party from '../images/Party.png';
-import casual from '../images/Casual.png';
-import formal from '../images/Formal.png';
+import styles from './SectionAboutProductStyles.module.css';
+import gym from '../../images/Gym.png';
+import party from '../../images/Party.png';
+import casual from '../../images/Casual.png';
+import formal from '../../images/Formal.png';
 
-function StylingProducts() {
+function SectionAboutProductStyles() {
   return (
     <div className={styles.__container}>
     <p>BROWSE BY DRESS STYLE</p>
@@ -27,4 +27,4 @@ function StylingProducts() {
   );
 }
 
-export default StylingProducts;
+export default SectionAboutProductStyles;
