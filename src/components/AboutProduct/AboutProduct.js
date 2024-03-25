@@ -6,38 +6,62 @@ function AboutProduct({ id }) {
   const [count, setCount] = useState(0);
   const [product, setProduct] = useState(null);
 
-  useEffect(()=>{
-    fetchData()
-  },[id])
-
-  useEffect(() => {
-    if (!product) fetchData();
-    else { let existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-          const isProductInCart = existingCart.find((item) => item.id === id);
-
-    if (!isProductInCart && count !== 0) {
-        existingCart.push({ ...product, qty: count });
-        localStorage.setItem("cart", JSON.stringify(existingCart));
-        } else { if (count == 0 && isProductInCart) {
-          setCount(isProductInCart.qty);}
-        existingCart = existingCart.map((e) => {
-          if (e.id == id) return { ...e, qty: count };
-          return e;
-        });
-        localStorage.setItem("cart", JSON.stringify(existingCart));
-      }
-    }
-  }, [count]);
-
   const fetchData = async () => {
     const product = await fetch(`https://fakestoreapi.com/products/${id}`);
+
     const data = await product.json();
+
     setProduct(data);
-    let existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-    const prod = existingCart.find((item) => item.id === id);
-    if(prod)
-    setCount(prod.qty)
+
+    const storageData = localStorage.getItem("cart");
+
+    if (storageData) {
+      const cart = JSON.parse(storageData);
+      const current = cart.find((item) => item.id == id);
+      if (current) {
+        setCount(current.qty);
+      } else {
+        setCount(0);
+      }
+    } else {
+      localStorage.setItem("cart", JSON.stringify([]));
+    }
   };
+
+  useEffect(() => {
+    if (!id) return;
+
+    fetchData()
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }, [id])
+
+  useEffect(() => {
+    if (!product) return;
+
+    let storageData = localStorage.getItem("cart");
+
+    if (storageData) {
+      storageData = JSON.parse(storageData);
+
+      let item = storageData.find((item) => item.id == id);
+
+      if (item && count) {
+        item.qty = count;
+      } else if (item && !count) {
+        storageData = storageData.filter((item) => item.id != id);
+      } else if (count) {
+        storageData.push({ ...product, qty: count });
+      }
+
+    } else {
+      storageData = [];
+    }
+
+    localStorage.setItem("cart", JSON.stringify([...storageData]));
+  }, [count]);
 
   return (
     <div className={styles.productContainer}>
@@ -53,20 +77,19 @@ function AboutProduct({ id }) {
           <div className={styles.detailsContainer}>
             <h2 className={styles.productName}>{product.title}</h2>
             <div className={styles.starsAndRate}>
-            <div className={styles.starsContainer}>
-                  <img src={star} alt="star" />
-                     <img src={star} alt="star" />
-                     <img src={star} alt="star" />
-                     <img src={star} alt="star" />
-                    <img src={star} alt="star" />
-                  </div>
-                  <div className={styles.productRating}>
-              {product.rating && product.rating.rate}/5
+              <div className={styles.starsContainer}>
+                <img src={star} alt="star" />
+                <img src={star} alt="star" />
+                <img src={star} alt="star" />
+                <img src={star} alt="star" />
+                <img src={star} alt="star" />
+              </div>
+              <div className={styles.productRating}>
+                {product.rating && product.rating.rate}/5
+              </div>
             </div>
-            </div>
-           
-            <div className={styles.productPrice}>
-                <p>${product.price}</p></div>
+<div className={styles.productPrice}>
+              <p>${product.price}</p></div>
             <div className={styles.productDescription}>
               {product.description}
             </div>
@@ -94,11 +117,14 @@ function AboutProduct({ id }) {
                 <div className={styles.dimension}>X-Large</div>
               </div>
             </div>
-            <h4 className={styles.order} style={{marginBottom:"5px"}}>Order now</h4>
+            <h4 className={styles.order} style={{ marginBottom: "5px" }}>Order now</h4>
             <div className={styles.buttonsContainer}>
               <div className={styles.quantityButtons}>
                 <button
-                  onClick={() => setCount(count - 1)}
+                  onClick={() => {
+                    if (!count) return;
+                    setCount(count - 1);
+                  }}
                   className={styles.quantityButton}>-</button>
                 <div className={styles.quantityDisplay}>{count}</div>
                 <button
@@ -114,4 +140,3 @@ function AboutProduct({ id }) {
 }
 
 export default AboutProduct;
-

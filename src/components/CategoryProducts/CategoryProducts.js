@@ -38,7 +38,7 @@ function CategoryProducts({ category }) {
 
 
   return (
-    <div style={{ textAlign: "center", fontFamily:"Integral CF" }}>
+    <div style={{ textAlign: "center"}}>
       {category && <h1>{category.toUpperCase()}</h1>}
       <div className={styles.product__container}>
         {(!category && products)&&

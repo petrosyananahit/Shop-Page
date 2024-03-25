@@ -13,7 +13,7 @@ function Comments() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop:"50px" }}>
+    <div style={{ textAlign: "center", marginTop:"50px", padding:"50px"}}>
       <div className={styles.commentsArea__container}>
         {CommentsData.slice(0, displayedReviews).map(e => {
           return (
