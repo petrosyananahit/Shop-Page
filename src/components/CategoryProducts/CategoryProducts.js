@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import SingleProductCard from "../SingleProductCard/SingleProductCard"
 import styles from "./CategoryProducts.module.css"
@@ -38,12 +38,12 @@ function CategoryProducts({ category }) {
 
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: "center", fontFamily:"Integral CF" }}>
       {category && <h1>{category.toUpperCase()}</h1>}
       <div className={styles.product__container}>
         {(!category && products)&&
           products.map((product) => (
-            <NavLink to={`products/${product.id}`} key={product.id}>
+            <NavLink to={`/products/${product.id}`} key={product.id}>
               <SingleProductCard
                 image={product.image}
                 name={product.title}
@@ -52,7 +52,7 @@ function CategoryProducts({ category }) {
             </NavLink>
           ))}
         {filteredProducts && filteredProducts.map((product) => (
-          <NavLink to={`products/${product.id}`} key={product.id}>
+          <NavLink to={`/products/${product.id}`} key={product.id}>
             <SingleProductCard
               image={product.image}
               name={product.title}

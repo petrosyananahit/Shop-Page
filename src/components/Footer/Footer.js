@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styles from "./Footer.module.css"
 import twitter from "../../images/twitter.png"
 import facebook from "../../images/facebook.png"
@@ -32,13 +33,13 @@ function Footer() {
     </div>
     <div className={styles.footer__second_container}>
     <div className={styles.footer__item}>
-        <p style={{fontWeight:"800", fontSize:"36px"}} className={styles.footer__headings}>SHOP.COM</p>
+        <p style={{fontWeight:"800", fontSize:"36px", fontFamily:"Integral CF"}} className={styles.footer__headings}>SHOP.COM</p>
         <p style={{fontSize:"12px"}}>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
         <div className={styles.iconsForSites_container}>
-            <a href='https://twitter.com/%22%22'><img src={twitter} className={styles.iconsForSites}/></a>
-            <a href='https://www.facebook.com/'><img src={facebook} className={styles.iconsForSites}/></a>
-            <a href='https://www.instagram.com/'><img src={instagram} className={styles.iconsForSites}/></a>
-            <a href='https://github.com/'><img src={github} className={styles.iconsForSites}/></a>
+            <Link to='https://twitter.com/%22%22'><img src={twitter} className={styles.iconsForSites}/></Link>
+            <Link to='https://www.facebook.com/'><img src={facebook} className={styles.iconsForSites}/></Link>
+            <Link to='https://www.instagram.com/'><img src={instagram} className={styles.iconsForSites}/></Link>
+            <Link to='https://github.com/'><img src={github} className={styles.iconsForSites}/></Link>
         </div>
     </div>
     <div className={styles.footerItems_container}>

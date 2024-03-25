@@ -6,6 +6,10 @@ function AboutProduct({ id }) {
   const [count, setCount] = useState(0);
   const [product, setProduct] = useState(null);
 
+  useEffect(()=>{
+    fetchData()
+  },[id])
+
   useEffect(() => {
     if (!product) fetchData();
     else { let existingCart = JSON.parse(localStorage.getItem("cart")) || [];

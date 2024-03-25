@@ -4,7 +4,7 @@ import Cart from './components/Carts/Carts'
 function CartPage() {
   return (
     <div>
-        <Cart/>
+      <Cart/>
     </div>
   )
 }

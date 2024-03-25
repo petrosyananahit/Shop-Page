@@ -3,7 +3,7 @@
     list-style: none;
     text-decoration: none;
 }
-  
+
 .before__header__container {
     height: 35px;
     background-color: #000000;
@@ -31,6 +31,7 @@
     font-weight: 900;
     color: #000000;
     margin-left: 100px;
+    font-family: "Integral CF";
 }
   
 .header__icons a img {
@@ -40,6 +41,7 @@
 .menu__list {
     display: flex;
     gap: 40px;
+    
 }
   
 .menu__link {
@@ -117,6 +119,9 @@
     height: 40px;
     text-align: left;
     border-bottom: 1px solid black;
+  }
+  .dropdown__menu li:last-child{
+    border-bottom: none;
   }
   .mobileContent.active .dropdown__menu {
     display: block;

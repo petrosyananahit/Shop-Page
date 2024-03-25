@@ -4,6 +4,7 @@
     max-width: 1440px;
     margin: 0 auto;
     gap: 20px;
+    font-family: 'Satoshi Medium';
   
   }
 
@@ -84,6 +85,7 @@
   .activity p {
     margin: 0;
     margin-right: 10px;
+   
   }
   
   .activityImage {

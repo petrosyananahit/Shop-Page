@@ -12,7 +12,7 @@ function Singlepage() {
     <AboutProduct id={+id}/>
     <FilterForComments/>
     <Comments/>
-    <h1 style={{textAlign:"center", margin:"50px", fontWeight:"900"}}>YOU MIGHT ALSO LIKE</h1>
+    <h1 style={{textAlign:"center", margin:"50px", fontWeight:"900", fontFamily:"Integral CF"}}>YOU MIGHT ALSO LIKE</h1>
     <Products/>
     </div>
   )

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./Carts.module.css";
 import deleteButton from '../../images/Delete.png';
+import { Link } from 'react-router-dom';
 
 function Cart() {
   const [cart, setCart] = useState(null);
@@ -54,17 +55,17 @@ function Cart() {
 
   return (
     <div style={{textAlign:"center"}}>
-      <h4 style={{fontSize:"34px", fontWeight:"700"}}>Carts</h4>
       <div className={styles.carts__container}>
         {cart ? (
           <div className={styles.productsContainer}>
+            <h4 style={{fontSize:"34px", fontWeight:"900", textAlign:"left", fontFamily:"Integral CF"}}>YOUR CART</h4>
             {cart.map((product, index) => (
               <div key={index} className={styles.product_Card}>
                 <img src={product.image} alt={product.title} className={styles.product_Image} />
                 <div className={styles.product_Details}>
                   <div className={styles.titleAndDeleteContainer}>
                     <h2 className={styles.product_Name}>{product.title}</h2>
-                    <a href='' onClick={() => removeFromCart(index)}><img src={deleteButton}/></a>
+                    <Link to='' onClick={() => removeFromCart(index)}><img src={deleteButton}/></Link>
                   </div>
                   <div className={styles.productSizeAndColor}>
                     <p>Size: <span>Large</span></p>

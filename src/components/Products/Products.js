@@ -46,7 +46,7 @@
           onScroll={handleScroll}
           style={{ height: '500px', overflowY: 'auto' }}>
           {products && products.map((product, index) => (
-            <NavLink to={`products/${product.id}`} key={index}>
+            <NavLink to={`/products/${product.id}`} key={index}>
             <SingleProductCard
               image={product.image}
               name={product.title}

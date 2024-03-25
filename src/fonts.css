@@ -1,0 +1,16 @@
+
+@font-face {
+    font-family: 'Integral CF';
+    src: url('./fonts/Demo_Fonts/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Satoshi Black';
+    src: url('./fonts/OTF/Satoshi-Black.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Satoshi Medium';
+  src: url('./fonts/OTF/Satoshi-Medium.otf') format('opentype');
+}
+

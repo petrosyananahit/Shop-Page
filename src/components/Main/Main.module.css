@@ -5,38 +5,40 @@
 }
 
 .main_container {
-    width: 1440px; 
-    height: 700px;
+    max-width: 1440px; 
+    height: 685px;
     margin: 0 auto; 
     background-color: #f2f0f1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
 }
 
 
 .image_container {
-    position: relative;
-    width: 100%;
+    max-width: 50%;
     height: 100%;
     display: flex;
     flex-direction: row-reverse;
 }
 
 .main__image {
-    max-width: 50%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
+
 }
 
 
 .text__overlay {
-    position: absolute;
     max-width: 50%;
-    top: 250px;
-    left: 30%;
-    transform: translate(-50%, -50%);
+    margin-top: 50px;
     text-align: left !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 .button{
@@ -55,10 +57,12 @@
 
 .first__text__overlay{
     font-size: 64px;
+    margin-top: 0;
     font-weight: 900;
     padding: 0 35px;
     line-height: 1;
     margin-bottom: 10px;
+    font-family: "Integral CF";
 }
 
 .second__text__overlay{
@@ -73,14 +77,14 @@
 }
 
 .blackstar{
-    width: 60px; 
-    height: 60px; 
+    width: 70px; 
+    height: 70px; 
 }
 
 .blackstarForCorner{
     position: absolute;
-    top: 80px; 
-    right: -650px; 
+    top: 50px; 
+    right: 50px; 
     width: 80px; 
     height: 80px; 
 }
@@ -88,9 +92,14 @@
 
 .statistics_heading{
     line-height: 0.2; 
+    font-size: 32px;
+    font-family: 'Satoshi Medium';
+    font-weight: 900;
 }
 .statistics__text {
     line-height: 0.6; 
+    color: rgba(0, 0, 0, 0.503);
+    font-size: 16px;
 }
 
 .after__button_container {
@@ -106,15 +115,6 @@
     margin-right: 20px;
 }
 
-.statistics_heading {
-    font-weight: 700;
-    font-size: 34px;
-}
-
-.statistics__text {
-    color: rgba(0, 0, 0, 0.503);
-    font-size: 16px;
-}
 
 .lastStatistics {
     border-right: none;
@@ -122,50 +122,37 @@
 
 
 .brandsContainer {
-        background-color: black;
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        left: 0%;
-        width: 100%; 
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    background-color: black;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 100%; 
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
       
     }
     
 .brands__image{
-    margin: 20px 30px;
+    margin: 30px 40px;
     max-height: 30px; 
 }
 
 
 @media only screen and (max-width: 600px){
-    .main__container{
-        width: 100%;
-        background-color: #f2f0f1;
-        position: absolute;
-        z-index: 999;
-    }
-    
-      
-    .image_container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction:column;
-        gap: 10px;
-        position: absolute;
 
-    }
-    .main__image {
-        max-width: 100%;
+    .main_container {
+        max-width: 600px; 
         height: 100%;
-        object-fit: cover;
-        order: 2;
-    }
-    
+        margin: 0 auto; 
+        background-color: #f2f0f1;
+        display: flex;
+        flex-direction: column-reverse;
+       align-items: center;
+           }
+   
     
     .text__overlay {
         max-width: 100%;
@@ -175,7 +162,6 @@
         justify-content: center;
         align-items: center;
         order: 1;
-        position: relative;
         left: 0;
         top: 0;
         transform: translate(0);
@@ -193,11 +179,6 @@
       text-align: center;
     
     }
-    .textAndStar{
-        display: flex;
-        justify-content: space-between;
-    }
-    
     .blackstar{
         display: none;
     }
@@ -229,9 +210,9 @@
     }
     
     .brandsContainer {
-         height: 150px;
+         height: 120px;
         flex-wrap: wrap;
-        top: 180%;
+        bottom: 0;
         }
         
     .brands__image{
@@ -241,4 +222,3 @@
     
 
 }
-
